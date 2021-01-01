@@ -1,1 +1,1 @@
-(()=>{"use strict";alert("Here is my message!")})();
+(()=>{var e={914:e=>{e.exports=function(e){alert(e)}}},r={};function t(s){if(r[s])return r[s].exports;var o=r[s]={exports:{}};return e[s](o,o.exports,t),o.exports}(()=>{"use strict";var e=t(914);alert("Here is my message!"),e("Here is my message from Notify2!")})()})();
