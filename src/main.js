@@ -1,5 +1,8 @@
-import notify from './Notification';
+import notifyDefault from './NotificationDefault';
 var notifyModule = require('./NotificationModule');
+import {notify, log} from './NotificationFunction';
 
-notify('Here is my message!');
-notifyModule('Here is my message from Notify2!');
+notifyDefault('Here is my message!');
+notifyModule('Here is my message from NotifyModule!');
+notify('Here is my message from NotifyFunction!');
+log('Here is my message from NotifyFunction!');
