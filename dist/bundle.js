@@ -1,1 +1,1 @@
-alert("main file");
+(()=>{"use strict";alert("Here is my message!")})();
