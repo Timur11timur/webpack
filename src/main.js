@@ -1,3 +1,4 @@
+require('./main.css');
 import notifyDefault from './NotificationDefault';
 var notifyModule = require('./NotificationModule');
 import {notify, log} from './NotificationFunction';
