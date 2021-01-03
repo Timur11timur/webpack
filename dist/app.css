@@ -1,11 +1,2 @@
 h1{color:green}
-body {
-    background-color: red;
-}
-
-#images {
-    width: 100px;
-    height: 100px;
-    background: url("./images/panther.png");
-    background-size: cover;
-}
+body{background-color:red}#images{width:100px;height:100px;background:url("./images/panther.png");background-size:cover}.no-fake-class{background-color:red}

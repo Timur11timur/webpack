@@ -8,3 +8,17 @@ body {
     background: url("./images/panther.png");
     background-size: cover;
 }
+
+#fake-id {
+    width: 100px;
+    height: 100px;
+}
+
+.fake-class {
+    width: 100px;
+    height: 100px;
+}
+
+.no-fake-class {
+    background-color: red;
+}

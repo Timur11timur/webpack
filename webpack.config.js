@@ -1,6 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
+const glob = require('glob');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var PurgeCSSPlugin = require('purgecss-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -19,6 +21,10 @@ module.exports = {
             filename: '[name].css'
         }),
 
+        new PurgeCSSPlugin({
+            paths: glob.sync(`index.html`,  { nodir: true })
+        }),
+
         new webpack.LoaderOptionsPlugin({
             minimize: true
         })
@@ -26,7 +32,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/,
+                test: /\.(s[ac]ss|css)$/,
                 use: [MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
@@ -35,15 +41,15 @@ module.exports = {
                     'sass-loader'
                 ]
             },
-            {
-                test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: { url: false}
-                    }
-                ]
-            },
+            // {
+            //     test: /\.css$/i,
+            //     use: [MiniCssExtractPlugin.loader,
+            //         {
+            //             loader: 'css-loader',
+            //             options: { url: false}
+            //         }
+            //     ]
+            // },
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
